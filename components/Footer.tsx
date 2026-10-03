@@ -50,7 +50,7 @@ export default function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@smanegeri1polewali926"
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 rounded-lg bg-gray-900 border border-blue-900/60 flex items-center justify-center text-gray-300 hover:text-white hover:border-blue-500 hover:bg-blue-600/20 transition-all"
