@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Instagram, Youtube, ArrowUp, Sparkles } from "lucide-react";
+import { MapPin, Instagram, Youtube, ArrowUp, Sparkles, Globe } from "lucide-react";
 import { FaTiktok } from "react-icons/fa6";
 import SafeImage from "./SafeImage";
 
@@ -103,14 +103,14 @@ export default function Footer() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <Instagram className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                <Globe className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <a
-                  href="https://www.instagram.com/ict_smansapol/"
+                  href="https://smansapolewali.sch.id/"
                   target="_blank"
                   rel="noreferrer"
                   className="font-mono text-xs text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  @ict_smansapol
+                  smansapolewali.sch.id
                 </a>
               </div>
             </div>
