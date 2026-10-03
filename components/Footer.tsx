@@ -2,6 +2,7 @@
 
 import React from "react";
 import { MapPin, Instagram, Youtube, ArrowUp, Sparkles } from "lucide-react";
+import { FaTiktok } from "react-icons/fa6";
 import SafeImage from "./SafeImage";
 
 export default function Footer() {
@@ -56,6 +57,15 @@ export default function Footer() {
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@ictsmansa"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-lg bg-gray-900 border border-blue-900/60 flex items-center justify-center text-gray-300 hover:text-white hover:border-blue-500 hover:bg-blue-600/20 transition-all"
+                aria-label="Tiktok"
+              >
+                <FaTiktok className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -120,7 +130,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} ICT SMAN 1 Polewali. Admin ICT 12 yang buat.
+            &copy; {new Date().getFullYear()} ICT SMAN 1 Polewali. Admin ICT Angkatan 12 yang buat.
           </p>
 
           <button
