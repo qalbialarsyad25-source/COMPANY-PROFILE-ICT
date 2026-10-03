@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Terminal, Users, ChevronRight, Layers } from "lucide-react";
+import { Terminal, Users, User, ChevronRight, Layers } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -59,6 +59,15 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
         >
+          {/* Button 3: Kenali Developer */}
+          <a
+            href="https://www.instagram.com/qalbi_arsyad/"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gray-950/80 hover:bg-blue-950/50 text-blue-200 hover:text-white font-bold text-base flex items-center justify-center gap-3 border border-blue-600/50 hover:border-blue-400 shadow-glow-blue hover:shadow-glow-blue-lg hover:scale-105 active:scale-95 transition-all duration-300 backdrop-blur-md"
+          >
+            <User className="w-5 h-5 text-blue-400" />
+            <span>Kenali Developer</span>
+          </a>
+        
           {/* Button 1: Jelajahi Divisi */}
           <a
             href="#divisi"
