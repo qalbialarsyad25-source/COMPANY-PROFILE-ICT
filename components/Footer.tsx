@@ -121,7 +121,7 @@ export default function Footer() {
                   <Sparkles className="w-3.5 h-3.5" />
                   Motto Ekstrakurikuler
                 </div>
-                &quot;Innovate, Collaborate, Transform through Technology.&quot;
+                &quot;Bersama ICT, Paham Teknologi, Ciptakan Inovasi.&quot;
               </div>
             </div>
           </div>
