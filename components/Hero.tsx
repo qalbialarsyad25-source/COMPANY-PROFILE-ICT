@@ -100,16 +100,16 @@ export default function Hero() {
             <div className="text-xs uppercase tracking-wider text-blue-400">Divisi Keahlian</div>
           </div>
           <div className="p-4 rounded-xl bg-gray-950/60 border border-blue-900/40 backdrop-blur-md">
-            <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">SMANSA</div>
-            <div className="text-xs uppercase tracking-wider text-gray-400">Polewali Mandar</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">60</div>
+            <div className="text-xs uppercase tracking-wider text-blue-400">Members</div>
           </div>
           <div className="p-4 rounded-xl bg-gray-950/60 border border-blue-900/40 backdrop-blur-md">
-            <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">100%</div>
-            <div className="text-xs uppercase tracking-wider text-gray-400">Inovasi Siswa</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">100%</div>
+            <div className="text-xs uppercase tracking-wider text-blue-400">Inovasi Siswa</div>
           </div>
           <div className="p-4 rounded-xl bg-gray-950/60 border border-blue-900/40 backdrop-blur-md">
             <div className="text-2xl sm:text-3xl font-bold text-white mb-1">Aktif</div>
-            <div className="text-xs uppercase tracking-wider text-cyan-400">Proyek & Karya</div>
+            <div className="text-xs uppercase tracking-wider text-blue-400">Proyek & Karya</div>
           </div>
         </motion.div>
       </div>
