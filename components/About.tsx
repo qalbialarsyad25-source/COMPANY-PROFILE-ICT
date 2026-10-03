@@ -59,7 +59,8 @@ export default function About() {
   const [selectedPhoto, setSelectedPhoto] = useState<DocumentationPhoto | null>(null);
 
   return (
-    <section id="tentang" className="py-24 bg-gray-900/50 relative border-t border-b border-blue-950/60">
+    <>
+      <section id="tentang" className="py-24 bg-gray-900/50 relative border-t border-b border-blue-950/60 overflow-hidden scroll-mt-16">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-700/10 rounded-full blur-[130px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-cyan-700/10 rounded-full blur-[100px] pointer-events-none -z-10" />
@@ -198,88 +199,93 @@ export default function About() {
             </ul>
           </motion.div>
         </div>
+      </div>
+    </section>
 
-        {/* Dedicated Documentation & Gallery Section */}
-        <div id="dokumentasi" className="pt-6">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+    {/* Dedicated Documentation & Gallery Section */}
+    <section id="dokumentasi" className="py-24 bg-black relative border-b border-blue-950/60 overflow-hidden scroll-mt-16">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[650px] h-[400px] bg-blue-900/15 rounded-full blur-[150px] pointer-events-none -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950 border border-blue-800/60 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4 shadow-glow-blue"
+          >
+            <Camera className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Dokumentasi Kegiatan</span>
+          </motion.div>
+          <motion.h3
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3"
+          >
+            Galeri <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-300 bg-clip-text text-transparent">ICT SMAN 1 Polewali</span>
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-gray-400 text-sm sm:text-base"
+          >
+            Dokumentasi potret kebersamaan, kepengurusan, dan aktivitas siswa di ekstrakurikuler ICT SMAN 1 Polewali. Klik foto untuk melihat ukuran penuh.
+          </motion.p>
+        </div>
+
+        {/* 5-Photo Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {documentationItems.map((item, idx) => (
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950 border border-blue-800/60 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4 shadow-glow-blue"
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              onClick={() => setSelectedPhoto(item)}
+              className={`group relative rounded-2xl overflow-hidden bg-gradient-to-b from-gray-900 to-black border border-blue-900/60 hover:border-blue-500 shadow-glow-card cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
+                idx === 0 ? "sm:col-span-2 lg:col-span-2" : "col-span-1"
+              }`}
             >
-              <Camera className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Dokumentasi Kegiatan</span>
-            </motion.div>
-            <motion.h3
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3"
-            >
-              Galeri <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-300 bg-clip-text text-transparent">ICT SMAN 1 Polewali</span>
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-400 text-sm sm:text-base"
-            >
-              Dokumentasi potret kebersamaan, kepengurusan, dan aktivitas siswa di ekstrakurikuler ICT SMAN 1 Polewali. Klik foto untuk melihat ukuran penuh.
-            </motion.p>
-          </div>
+              <div className={`relative w-full overflow-hidden ${idx === 0 ? "h-64 sm:h-80" : "h-64"}`}>
+                <SafeImage
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  fallbackText={item.title}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
 
-          {/* 5-Photo Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {documentationItems.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                onClick={() => setSelectedPhoto(item)}
-                className={`group relative rounded-2xl overflow-hidden bg-gradient-to-b from-gray-900 to-black border border-blue-900/60 hover:border-blue-500 shadow-glow-card cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
-                  idx === 0 ? "sm:col-span-2 lg:col-span-2" : "col-span-1"
-                }`}
-              >
-                <div className={`relative w-full overflow-hidden ${idx === 0 ? "h-64 sm:h-80" : "h-64"}`}>
-                  <SafeImage
-                    src={item.src}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    fallbackText={item.title}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
-
-                  {/* Tag Badge */}
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-blue-500/50 text-[11px] font-semibold text-blue-300 shadow-glow-blue flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                    <span>{item.tag}</span>
-                  </div>
-
-                  {/* Expand icon on hover */}
-                  <div className="absolute top-3 right-3 p-2 rounded-lg bg-black/70 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Maximize2 className="w-4 h-4 text-cyan-400" />
-                  </div>
-
-                  {/* Caption & Title */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-gray-300 line-clamp-2 font-light">
-                      {item.subtitle}
-                    </p>
-                  </div>
+                {/* Tag Badge */}
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-blue-500/50 text-[11px] font-semibold text-blue-300 shadow-glow-blue flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                  <span>{item.tag}</span>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+
+                {/* Expand icon on hover */}
+                <div className="absolute top-3 right-3 p-2 rounded-lg bg-black/70 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Maximize2 className="w-4 h-4 text-cyan-400" />
+                </div>
+
+                {/* Caption & Title */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors mb-1">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 line-clamp-2 font-light">
+                    {item.subtitle}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -342,6 +348,7 @@ export default function About() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+      </section>
+    </>
   );
 }

@@ -12,7 +12,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="kontak" className="bg-black text-gray-400 border-t border-blue-950 relative overflow-hidden">
+    <footer id="kontak" className="bg-black text-gray-400 border-t border-blue-950 relative overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Decorative Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-900/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 

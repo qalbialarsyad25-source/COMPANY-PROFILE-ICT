@@ -60,7 +60,7 @@ const divisionsData: Division[] = [
 
 export default function Divisions() {
   return (
-    <section id="divisi" className="py-24 bg-black relative tech-grid-bg">
+    <section id="divisi" className="py-24 bg-black relative tech-grid-bg overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-900/15 rounded-full blur-[150px] pointer-events-none -z-10" />
 

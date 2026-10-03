@@ -27,14 +27,14 @@ export default function DivisionCard({ division, index }: DivisionCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#0a1224] to-[#040814] p-6 border border-blue-900/70 hover:border-blue-500 hover:shadow-[0_0_35px_rgba(59,130,246,0.4)] transition-all duration-300 transform hover:-translate-y-1.5"
+      className="group relative flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#0a1224] to-[#040814] p-5 sm:p-6 border border-blue-900/70 hover:border-blue-500 hover:shadow-[0_0_35px_rgba(59,130,246,0.4)] transition-all duration-300 transform hover:-translate-y-1.5"
     >
       {/* Glow Corner Highlight */}
       <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-bl-full pointer-events-none group-hover:bg-blue-500/20 transition-colors" />
 
       <div>
         {/* Division Banner Image (Safe fallback) */}
-        <div className="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-6 border border-blue-900/50 shadow-inner group-hover:border-blue-500/50 transition-colors bg-[#021637] flex items-center justify-center">
+        <div className="relative w-full h-48 sm:h-56 rounded-xl overflow-hidden mb-6 border border-blue-900/50 shadow-inner group-hover:border-blue-500/50 transition-colors bg-[#021637] flex items-center justify-center">
           <SafeImage
             src={division.image}
             alt={division.name}

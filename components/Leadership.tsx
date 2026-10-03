@@ -70,7 +70,7 @@ const executiveLeaders: LeaderProfile[] = [
 
 export default function Leadership() {
   return (
-    <section id="struktur" className="py-24 bg-gray-900/40 relative border-t border-blue-950/60">
+    <section id="struktur" className="py-24 bg-gray-900/40 relative border-t border-blue-950/60 overflow-hidden scroll-mt-16 sm:scroll-mt-20">
       {/* Background Lighting */}
       <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-10 w-[350px] h-[350px] bg-cyan-600/10 rounded-full blur-[130px] pointer-events-none -z-10" />
