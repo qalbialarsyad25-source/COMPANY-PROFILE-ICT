@@ -126,7 +126,7 @@ export default function Leadership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="group relative rounded-2xl bg-gradient-to-b from-[#0b1329] to-[#040813] border border-blue-900/60 p-6 flex flex-col items-center text-center hover:border-blue-500 hover:shadow-glow-card transition-all duration-300"
+                className="group relative rounded-2xl bg-gradient-to-b from-[#0b1329] to-[#040813] border border-blue-900/60 p-6 flex flex-col items-center text-center shadow-glow-card hover:border-blue-400 hover:shadow-glow-blue transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Photo Slot */}
                 <div className="relative w-36 h-36 rounded-2xl overflow-hidden mb-5 border-2 border-blue-800/80 shadow-glow-blue group-hover:border-blue-400 transition-colors">
@@ -177,10 +177,8 @@ export default function Leadership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`group relative rounded-2xl bg-gradient-to-b from-[#0a1227] to-[#030611] p-6 flex flex-col items-center text-center transition-all duration-300 ${
-                  person.role.includes("Ketua Ekstrakurikuler")
-                    ? "border-2 border-blue-500 shadow-glow-blue-lg bg-[#0d1838]"
-                    : "border border-blue-900/60 hover:border-blue-400 hover:shadow-glow-card"
+                className={`group relative rounded-2xl bg-gradient-to-b from-[#0a1227] to-[#030611] p-6 flex flex-col items-center text-center shadow-glow-card transition-all duration-300 hover:-translate-y-1 ${
+"border border-blue-900/60 hover:border-blue-400 hover:shadow-glow-blue"
                 }`}
               >
                 {/* Photo Slot */}
