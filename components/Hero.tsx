@@ -67,7 +67,7 @@ export default function Hero() {
             <User className="w-5 h-5 text-blue-400" />
             <span>Kenali Developer</span>
           </a>
-        
+
           {/* Button 1: Jelajahi Divisi */}
           <a
             href="#divisi"
@@ -100,7 +100,7 @@ export default function Hero() {
             <div className="text-xs uppercase tracking-wider text-blue-400">Divisi Keahlian</div>
           </div>
           <div className="p-4 rounded-xl bg-gray-950/60 border border-blue-900/40 backdrop-blur-md">
-            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">60</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white mb-1">155</div>
             <div className="text-xs uppercase tracking-wider text-blue-400">Members</div>
           </div>
           <div className="p-4 rounded-xl bg-gray-950/60 border border-blue-900/40 backdrop-blur-md">
